@@ -5,15 +5,15 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Server } from "lucide-react";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "cs", label: "Čeština" },
+  { code: "sk", label: "Slovenčina" },
 ];
 
 export function Navbar() {
-  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -22,8 +22,9 @@ export function Navbar() {
     <nav className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold">
-            BatCore.eu
+          <Link href="/" className="flex items-center space-x-2">
+            <Server className="w-6 h-6 text-blue-400" />
+            <span className="text-xl font-bold">BatCore.eu</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -57,17 +58,12 @@ function NavLinks() {
       <Link href="/minecraft" className="hover:text-primary">
         {t("nav.minecraft")}
       </Link>
-      <Link href="/knowledge-base" className="hover:text-primary">
-        {t("nav.knowledgeBase")}
+      <Link href="/vps" className="hover:text-primary">
+        {t("nav.vps")}
       </Link>
       <Link href="/client" className="hover:text-primary">
         {t("nav.clientZone")}
       </Link>
-      <Button variant="outline" asChild>
-        <Link href="https://discord.gg/batcore">
-          {t("nav.discord")}
-        </Link>
-      </Button>
     </>
   );
 }
@@ -75,8 +71,11 @@ function NavLinks() {
 function LanguageSelector() {
   const { i18n } = useTranslation();
 
+  // Default to English if the current language is not in the predefined list
+  const currentLanguage = LANGUAGES.some(lang => lang.code === i18n.language) ? i18n.language : "en";
+
   return (
-    <Select value={i18n.language} onValueChange={(value) => i18n.changeLanguage(value)}>
+    <Select value={currentLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
       <SelectTrigger className="w-[120px]">
         <SelectValue />
       </SelectTrigger>

@@ -14,9 +14,7 @@ export default function MinecraftPage() {
         <BackgroundAnimation />
         <div className="relative z-10 py-20 px-4">
           <div className="container mx-auto">
-            <h1 className="text-4xl font-bold text-center mb-8">
-              Minecraft
-            </h1>
+            <h1 className="text-4xl font-bold text-center mb-8">Minecraft Hosting Packages</h1>
             <PackageGrid packages={packages} isLoading={isLoading} error={error} />
           </div>
         </div>

@@ -9,54 +9,49 @@ export function Footer() {
   return (
     <footer className="bg-background/80 backdrop-blur-sm border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("footer.company")}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.company.title")}</h3>
             <div className="space-y-2 text-muted-foreground">
-              <p>BatCore s.r.o.</p>
-              <p>VAT: CZ12345678</p>
-              <p>Prague, Czech Republic</p>
+            <p>Erik Czukár</p>
+            <p>IČO: 51953692.</p>
+            <p>Kameničná 591</p>
+            <p>946 01 Kameničná</p>
+            <p>info@batcore.eu</p>
+            <p>Neplátca DPH</p>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("footer.contact")}</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p>support@batcore.eu</p>
-              <p>+420 123 456 789</p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t("footer.links")}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.links.title")}</h3>
             <div className="space-y-2">
-              <Link href="/terms" className="block text-muted-foreground hover:text-primary">
-                {t("footer.terms")}
+              <Link href="/vop.pdf" className="block text-muted-foreground hover:text-primary">
+                {t("footer.links.vop")}
               </Link>
-              <Link href="/privacy" className="block text-muted-foreground hover:text-primary">
-                {t("footer.privacy")}
+              <Link href="https://client.batcore.eu" className="block text-muted-foreground hover:text-primary">
+                {t("footer.links.client")}
               </Link>
-              <Link href="/gdpr" className="block text-muted-foreground hover:text-primary">
-                {t("footer.gdpr")}
+              <Link href="https://wiki.batcore.eu" className="block text-muted-foreground hover:text-primary">
+                {t("footer.links.knowledgeBase")}
               </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("footer.social")}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("footer.social.title")}</h3>
             <div className="space-y-2">
-              <Link href="https://discord.gg/batcore" className="block text-muted-foreground hover:text-primary">
+              <Link href="https://discord.gg/4PeFg4a8KF" className="block text-muted-foreground hover:text-primary">
                 Discord
               </Link>
-              <Link href="https://twitter.com/batcoreeu" className="block text-muted-foreground hover:text-primary">
-                Twitter
+              <Link href="https://github.com/batcoreeu" className="block text-muted-foreground hover:text-primary">
+                Github
               </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} BatCore s.r.o. {t("footer.rights")}</p>
+          <p>&copy; {new Date().getFullYear()} BatCore.eu {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

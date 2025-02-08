@@ -1,26 +1,33 @@
 export const en = {
   nav: {
     minecraft: "Minecraft",
-    knowledgeBase: "Knowledge Base",
-    clientZone: "Client Zone",
-    discord: "Discord"
+    vps: "VPS",
+    clientZone: "Client Zone"
   },
-  footer: {
-    company: "Company",
-    contact: "Contact",
-    links: "Links",
-    social: "Social",
-    terms: "Terms of Service",
-    privacy: "Privacy Policy",
-    gdpr: "GDPR",
-    rights: "All rights reserved."
+  hero: {
+    title: "Premium Game Hosting",
+    subtitle: "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
+    getStarted: "Get Started",
+    learnMore: "Learn More",
+    stats: {
+      uptime: "Uptime",
+      latency: "Latency",
+      support: "Support"
+    }
   },
-  serverLocation: {
-    title: "Our Server Location",
-    description: "Experience low latency gaming with our strategically located server.",
-    testPing: "Test your connection",
-    testing: "Testing...",
-    test: "Test Connection"
+  services: {
+    title: "Our Services",
+    description: "Choose from our range of premium hosting solutions",
+    minecraft: {
+      title: "Minecraft Hosting",
+      description: "High-performance Minecraft servers with instant setup, automatic backups, and 24/7 support.",
+      cta: "View Minecraft Plans"
+    },
+    vps: {
+      title: "VPS Servers",
+      description: "Powerful virtual private servers with full root access, perfect for any application or game server.",
+      cta: "Explore VPS Options"
+    }
   },
   aboutUs: {
     title: "About BatCore",
@@ -44,9 +51,38 @@ export const en = {
       }
     }
   },
-  packages: {
-    loading: "Loading packages...",
-    error: "Failed to load packages",
-    order: "Order Now"
+  footer: {
+    company: {
+      title: "Company",
+      about: "About Us",
+      careers: "Careers",
+      blog: "Blog"
+    },
+    contact: {
+      title: "Contact",
+      support: "Support",
+      sales: "Sales",
+      address: "Address"
+    },
+    links: {
+      title: "Links",
+      vop: "Terms of Service",
+      client: "Client Zone",
+      knowledgeBase: "Knowledge Base",
+    },
+    social: {
+      title: "Follow Us",
+      twitter: "Twitter",
+      facebook: "Facebook",
+      instagram: "Instagram",
+      discord: "Discord"
+    },
+    rights: "All rights reserved"
+  },
+  serverLocation: {
+    title: "Server Locations",
+    description: "Choose from our strategically placed data centers",
+    test: "Test Connection",
+    testPing: "Testing ping...",
   }
 };

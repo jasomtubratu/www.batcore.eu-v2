@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { DiscordStats } from "./discord-stats";
 import { DiscordPreview } from "./discord-preview";
 import { Button } from "@/components/ui/button";
-import { Discord } from "lucide-react";
+import { Users } from "lucide-react";
 
 export function DiscordSection() {
   return (
@@ -28,10 +28,11 @@ export function DiscordSection() {
         </div>
 
         <div className="mt-8 text-center">
-          <Button size="lg" className="group">
+          <Button size="lg" className="group" onClick={() => window.open("https://discord.gg/4PeFg4a8KF", "_blank")}>
             Join Our Discord
-            <Discord className="ml-2 group-hover:animate-bounce" />
+            <Users className="w-6 h-6 ml-2 group-hover:animate-bounce" />
           </Button>
+
         </div>
       </div>
     </section>

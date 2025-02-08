@@ -2,24 +2,21 @@ import { ServerLocation } from "./types";
 
 export const serverLocations: ServerLocation[] = [
   {
+    id: "cz1",
     name: "Prague DC1",
     location: "Prague, Czech Republic",
     status: "active",
-    ping: 5,
+    type: "minecraft",
+    ip: "87.236.197.63",
     coordinates: { x: 45, y: 35 }
   },
   {
-    name: "Prague DC2",
-    location: "Prague, Czech Republic",
-    status: "active",
-    ping: 7,
-    coordinates: { x: 48, y: 38 }
-  },
-  {
-    name: "Brno DC1",
+    id: "de1",
+    name: "Germany DC1",
     location: "Brno, Czech Republic",
     status: "active",
-    ping: 8,
+    ip: "de1.batcore.eu",
+    type: "vps",
     coordinates: { x: 52, y: 45 }
   }
 ];

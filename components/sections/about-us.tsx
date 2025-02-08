@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 import { Shield, Users, Target, Heart } from "lucide-react";
+import { GlowingEffect } from "../ui/glowing-effect";
 
 const values = [
   {
@@ -56,6 +57,13 @@ export function AboutUs() {
               transition={{ delay: index * 0.1 }}
             >
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-blue-500/20">
+              <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
                 <value.icon className="w-10 h-10 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{t(value.title)}</h3>
                 <p className="text-muted-foreground">{t(value.description)}</p>

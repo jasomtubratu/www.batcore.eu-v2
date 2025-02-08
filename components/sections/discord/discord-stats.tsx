@@ -1,24 +1,24 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Users, MessageSquare, Headphones } from "lucide-react";
+import { Users, MessageSquare, Headphones, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const stats = [
   {
     icon: Users,
-    value: "5,000+",
+    value: "100+",
     label: "Members"
   },
   {
     icon: MessageSquare,
-    value: "50+",
-    label: "Active Channels"
+    value: "20+",
+    label: "Channels"
   },
   {
-    icon: Headphones,
+    icon: HelpCircle,
     value: "24/7",
-    label: "Voice Support"
+    label: "Support"
   }
 ];
 

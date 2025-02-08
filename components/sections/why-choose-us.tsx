@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Cpu, Clock, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { GlowingEffect } from "../ui/glowing-effect";
 
 export function WhyChooseUs() {
   return (
@@ -30,6 +31,13 @@ export function WhyChooseUs() {
               transition={{ delay: 0.1 * index }}
             >
               <Card className="border-blue-500/20 bg-card/50 backdrop-blur-sm">
+              <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
                 <CardHeader>
                   <feature.icon className="w-10 h-10 text-blue-500 mb-2" />
                   <CardTitle>{feature.title}</CardTitle>

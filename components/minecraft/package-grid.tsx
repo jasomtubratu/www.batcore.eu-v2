@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import {MemoryStick, Cpu, HardDrive, Database, Archive, Network } from "lucide-react";
+import { Memory, Cpu, HardDrive, Database, Archive, Network, MemoryStick } from "lucide-react";
+import { LoadingScreen } from "../loading";
 
 interface Package {
   id: string;
@@ -24,11 +25,22 @@ interface PackageGridProps {
   error: any;
 }
 
+function Spec({ icon: Icon, value, label }: { icon: any; value: string | number; label: string }) {
+  return (
+    <li className="flex items-center gap-2">
+      <Icon className="w-5 h-5 text-blue-400" />
+      <span>
+        {value} {label}
+      </span>
+    </li>
+  );
+}
+
 export function PackageGrid({ packages, isLoading, error }: PackageGridProps) {
   const { t } = useTranslation();
 
   if (isLoading) {
-    return <div className="text-center">{t("packages.loading")}</div>;
+    return <LoadingScreen />;
   }
 
   if (error) {
@@ -36,7 +48,7 @@ export function PackageGrid({ packages, isLoading, error }: PackageGridProps) {
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {packages.map((pkg, index) => (
         <motion.div
           key={pkg.id}
@@ -57,9 +69,6 @@ export function PackageGrid({ packages, isLoading, error }: PackageGridProps) {
                 <Spec icon={MemoryStick} value={`${pkg.ram} MB`} label="RAM" />
                 <Spec icon={Cpu} value={`${pkg.cpu}%`} label="CPU" />
                 <Spec icon={HardDrive} value={`${pkg.disk} MB`} label="Storage" />
-                <Spec icon={Database} value={pkg.databases} label="Databases" />
-                <Spec icon={Archive} value={pkg.backups} label="Backups" />
-                <Spec icon={Network} value={pkg.allocations} label="Allocations" />
               </ul>
             </CardContent>
             <CardFooter>
@@ -73,16 +82,5 @@ export function PackageGrid({ packages, isLoading, error }: PackageGridProps) {
         </motion.div>
       ))}
     </div>
-  );
-}
-
-function Spec({ icon: Icon, value, label }: { icon: any; value: string | number; label: string }) {
-  return (
-    <li className="flex items-center gap-2">
-      <Icon className="w-5 h-5 text-blue-400" />
-      <span>
-        {value} {label}
-      </span>
-    </li>
   );
 }

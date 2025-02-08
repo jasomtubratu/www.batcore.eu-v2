@@ -4,14 +4,38 @@ import { Card } from "@/components/ui/card";
 import { ServerLocation } from "./types";
 import { motion } from "framer-motion";
 import { Activity, Signal } from "lucide-react";
+import { useEffect, useState } from "react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
-export function ServerCard({ name, status, ping, location }: ServerLocation) {
+export function ServerCard({ name, status, location, ip, id }: ServerLocation) {
+  const [ping, setPing] = useState<number | null>(null);
+
+  useEffect(() => {
+    const fetchPing = async () => {
+      try {
+        const res = await fetch(`/api/ping/${id}`);
+        const data = await res.json();
+        setPing(data.ping);
+      } catch (error) {
+        setPing(null);
+      }
+    }
+    fetchPing();
+  }, [id]);
+
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
       className="transition-all"
     >
-      <Card className="p-4 bg-card/50 backdrop-blur-sm border-blue-500/20">
+      <Card className="p-4 bg-card/50 backdrop-blur-sm border-blue-500/20" key={id}>
+      <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-semibold text-lg">{name}</h3>

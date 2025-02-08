@@ -4,8 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Activity, Signal } from "lucide-react";
+import { Activity, Loader, Signal, SignalHigh, SignalLow, SignalZero } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { GlowingEffect } from "../ui/glowing-effect";
 
 export function ServerLocation() {
   const { t } = useTranslation();
@@ -42,12 +43,19 @@ export function ServerLocation() {
 
         <div className="max-w-xl mx-auto">
           <Card className="p-6 bg-card/50 backdrop-blur-sm border-blue-500/20">
+          <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="text-xl font-semibold">Prague DC1</h3>
                 <p className="text-muted-foreground">Prague, Czech Republic</p>
               </div>
-              <Signal className="w-6 h-6 text-green-400" />
+              <Loader className="w-6 h-6 text-green-400" />
             </div>
 
             <div className="flex items-center justify-between">

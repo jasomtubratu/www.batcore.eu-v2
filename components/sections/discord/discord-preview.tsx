@@ -11,7 +11,7 @@ export function DiscordPreview() {
       className="relative aspect-video rounded-lg overflow-hidden bg-[#36393f] border border-[#202225]"
     >
       <iframe
-        src="https://discord.com/widget?id=YOUR_DISCORD_ID&theme=dark"
+        src="https://discord.com/widget?id=1263601764507189260&theme=dark"
         width="100%"
         height="100%"
         frameBorder="0"

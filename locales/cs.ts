@@ -1,26 +1,33 @@
 export const cs = {
   nav: {
     minecraft: "Minecraft",
-    knowledgeBase: "Znalostní báze",
-    clientZone: "Klientská zóna",
-    discord: "Discord"
+    vps: "VPS",
+    clientZone: "Klientská zóna"
   },
-  footer: {
-    company: "Společnost",
-    contact: "Kontakt",
-    links: "Odkazy",
-    social: "Sociální sítě",
-    terms: "Obchodní podmínky",
-    privacy: "Ochrana soukromí",
-    gdpr: "GDPR",
-    rights: "Všechna práva vyhrazena."
+  hero: {
+    title: "Prémiový Herní Hosting",
+    subtitle: "Zažijte bleskovou rychlost s našimi prémiovými hostingovými řešeními. Vytvořeno hráči pro hráče.",
+    getStarted: "Začít",
+    learnMore: "Zjistit více",
+    stats: {
+      uptime: "Dostupnost",
+      latency: "Odezva",
+      support: "Podpora"
+    }
   },
-  serverLocation: {
-    title: "Naše serverová lokace",
-    description: "Zažijte hraní s nízkou odezvou díky strategicky umístěnému serveru.",
-    testPing: "Otestujte své připojení",
-    testing: "Testování...",
-    test: "Test připojení"
+  services: {
+    title: "Naše Služby",
+    description: "Vyberte si z našich prémiových hostingových řešení",
+    minecraft: {
+      title: "Minecraft Hosting",
+      description: "Výkonné Minecraft servery s okamžitým nastavením, automatickými zálohami a 24/7 podporou.",
+      cta: "Zobrazit Minecraft Plány"
+    },
+    vps: {
+      title: "VPS Servery",
+      description: "Výkonné virtuální privátní servery s plným root přístupem, ideální pro jakoukoliv aplikaci nebo herní server.",
+      cta: "Prozkoumat VPS Možnosti"
+    }
   },
   aboutUs: {
     title: "O BatCore",
@@ -44,9 +51,50 @@ export const cs = {
       }
     }
   },
-  packages: {
-    loading: "Načítání balíčků...",
-    error: "Nepodařilo se načíst balíčky",
-    order: "Objednat"
+  footer: {
+    company: {
+      title: "Společnost",
+      about: "O nás",
+      careers: "Kariéra",
+      blog: "Blog"
+    },
+    contact: {
+      title: "Kontakt",
+      support: "Podpora",
+      sales: "Prodej",
+      address: "Adresa"
+    },
+    links: {
+      terms: "Obchodní podmínky",
+      privacy: "Ochrana soukromí",
+      cookies: "Zásady cookies"
+    },
+    social: {
+      title: "Sledujte nás",
+      twitter: "Twitter",
+      facebook: "Facebook",
+      instagram: "Instagram",
+      discord: "Discord"
+    }
+  },
+  serverLocation: {
+    title: "Serverové lokace",
+    description: "Vyberte si z našich strategicky umístěných datacenter",
+    test: "Test připojení",
+    testPing: "Testování pingu...",
+    locations: [
+      {
+        city: "Praha",
+        code: "DC1",
+        country: "Česká republika",
+        type: "minecraft"
+      },
+      {
+        city: "Berlín",
+        code: "DC2",
+        country: "Německo",
+        type: "vps"
+      }
+    ]
   }
 };
