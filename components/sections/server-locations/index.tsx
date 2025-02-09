@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ServerCard } from "./server-card";
 import { ServerMap } from "./server-map";
 import { serverLocations } from "./data";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export function ServerLocations() {
   return (

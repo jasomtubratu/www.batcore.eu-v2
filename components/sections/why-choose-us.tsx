@@ -67,7 +67,7 @@ const features = [
   },
   {
     icon: Clock,
-    title: "99.9% Uptime",
+    title: "99% Uptime",
     description: "Guaranteed uptime with redundant infrastructure",
   },
   {

@@ -10,8 +10,27 @@ import { ServicesSection } from "@/components/sections/services";
 import Lenis from 'lenis'
 import { useEffect } from "react";
 import { DiscordSection } from "@/components/sections/discord";
+import Cookies from "js-cookie";
+import { useSearchParams } from 'next/navigation'
 
 export default function Home() {
+  const seachParams = useSearchParams();
+  const af = seachParams.get('af');
+
+  useEffect(() => {
+    if (af) {
+      Cookies.set("AFF_ID", af, {
+        expires: 1,
+        domain: ".batcore.eu",
+      });
+
+      const newUrl = new URL(window.location.href);
+
+      newUrl.searchParams.delete("af");
+      window.history.replaceState({}, document.title, newUrl.toString());
+    }
+  }, [af]);
+
   useEffect(() => {
     const lenis = new Lenis();
 

@@ -18,6 +18,20 @@ export const en = {
       perMonth: "/month"
     }
   },
+  vps: {
+    title: "VPS Hosting",
+    subtitle: "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    packages: {
+      switchCurrency: "Switch Currency",
+      specs: {
+        ram: "RAM",
+        cpu: "vCPU",
+        storage: "Storage"
+      },
+      order: "Order Now",
+      perMonth: "/month"
+    }
+  },
   hero: {
     title: "Premium Game Hosting",
     subtitle: "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
@@ -49,7 +63,7 @@ export const en = {
     values: {
       reliability: {
         title: "Reliability",
-        description: "99.9% uptime guarantee with enterprise-grade infrastructure"
+        description: "99% uptime guarantee with enterprise-grade infrastructure"
       },
       community: {
         title: "Community",
@@ -66,6 +80,10 @@ export const en = {
     }
   },
   footer: {
+    truestpilot: {
+      title: "We are rated",
+      rating: "Excellent",
+    },
     company: {
       title: "Company",
       about: "About Us",

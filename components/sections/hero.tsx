@@ -59,7 +59,7 @@ export function HeroSection() {
 }
 
 const stats = [
-  { key: "uptime", value: "99.9%" },
+  { key: "uptime", value: "99%" },
   { key: "latency", value: "<10ms" },
   { key: "support", value: "24/7" },
 ];

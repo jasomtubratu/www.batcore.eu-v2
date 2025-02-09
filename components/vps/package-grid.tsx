@@ -42,7 +42,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
   const [currency, setCurrency] = useState<Currency>("EUR");
 
   const convertPrice = (price: number, currency: Currency) => {
-    return (price * EXCHANGE_RATES[currency]).toFixed(2);
+    return (price *30 * EXCHANGE_RATES[currency]).toFixed(2);
   };
 
   return (
@@ -88,7 +88,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
                     alt={pkg.name}
                     layout="fill"
                     objectFit="contain"
-                    className="max-h-full"
+                    className="max-h-full mt-3"
                   />
                 </div>
               )}
@@ -109,7 +109,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
                   transition={{ delay: 0.3 }}
                 >
                   {CURRENCY_SYMBOLS[currency]}{convertPrice(pkg.cost, currency)}
-                  <span className="text-sm text-muted-foreground">{t("minecraft.packages.perMonth")}</span>
+                  <span className="text-sm text-muted-foreground">{t("vps.packages.perMonth")}</span>
                 </motion.p>
               </CardHeader>
               
@@ -117,18 +117,18 @@ export function PackageGrid({ packages }: PackageGridProps) {
                 <ul className="space-y-4">
                   <Spec 
                     icon={Cpu} 
-                    value={`${pkg.cpu}%`} 
-                    label={t("minecraft.packages.specs.cpu")} 
+                    value={`${pkg.cpu}x`} 
+                    label={t("vps.packages.specs.cpu")} 
                   />
                   <Spec 
                     icon={MemoryStick} 
                     value={`${pkg.ram} MB`} 
-                    label={t("minecraft.packages.specs.ram")} 
+                    label={t("vps.packages.specs.ram")} 
                   />
                   <Spec 
                     icon={HardDrive} 
                     value={`${pkg.disk} MB`} 
-                    label={t("minecraft.packages.specs.storage")} 
+                    label={t("vps.packages.specs.storage")} 
                   />
                 </ul>
               </CardContent>
@@ -143,7 +143,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    {t("minecraft.packages.order")}
+                    {t("vps.packages.order")}
                   </a>
                 </Button>
               </CardFooter>

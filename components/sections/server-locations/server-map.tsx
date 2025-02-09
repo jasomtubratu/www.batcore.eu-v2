@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ServerLocation } from "./types";
+import Image from "next/image";
 
 interface ServerMapProps {
   locations: ServerLocation[];
@@ -10,7 +11,12 @@ interface ServerMapProps {
 export function ServerMap({ locations }: ServerMapProps) {
   return (
     <div className="relative aspect-[16/9] bg-blue-950/50 rounded-lg overflow-hidden">
-      <div className="absolute inset-0 bg-grid-white/10 bg-grid-16" />
+      <Image
+        src="/mapa2.png"
+        layout="fill"
+        objectFit="object-cover"
+        alt="Server Map"
+      />
       {locations.map((location, index) => (
         <motion.div
           key={index}
