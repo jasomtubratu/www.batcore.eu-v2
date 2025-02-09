@@ -33,7 +33,7 @@ export function HeroSection() {
             <Button size="lg" className="group" asChild>
               <Link href="https://client.batcore.eu">
                 {t("hero.getStarted")}
-                <Zap className="ml-2 group-hover:animate-bounce" />
+                <Zap className="ml-2 " />
               </Link>
             </Button>
           </div>

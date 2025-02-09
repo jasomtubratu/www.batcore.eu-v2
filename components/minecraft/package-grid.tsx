@@ -27,7 +27,7 @@ type Currency = "EUR" | "CZK" | "CREDITS";
 
 const EXCHANGE_RATES = {
   EUR: 0.01,
-  CZK: 0.25,
+  CZK: 0.245,
   CREDITS: 1
 };
 

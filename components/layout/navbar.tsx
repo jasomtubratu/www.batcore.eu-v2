@@ -62,7 +62,7 @@ function NavLinks() {
       <Link href="/vps" className="hover:text-primary">
         {t("nav.vps")}
       </Link>
-      <Link href="/client" className="hover:text-primary">
+      <Link href="https://client.batcore.eu" className="hover:text-primary">
         {t("nav.clientZone")}
       </Link>
     </>

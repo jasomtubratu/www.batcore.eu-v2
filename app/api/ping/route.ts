@@ -22,7 +22,6 @@ export async function GET() {
             }
 
             const data = await response.json();
-            console.log(`API Response for ${location.id}:`, data); // Debugging log
 
             if (!data?.data) {
                 console.error(`Unexpected response format for ${location.id}`);
@@ -39,7 +38,6 @@ export async function GET() {
 
             const responseTimes = region.response_times;
 
-            // Get the latest response time entry
             const latestTime = responseTimes[responseTimes.length - 1]?.response_time || 0;
 
             results.push({

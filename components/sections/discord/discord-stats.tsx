@@ -3,26 +3,29 @@
 import { Card } from "@/components/ui/card";
 import { Users, MessageSquare, Headphones, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
-
-const stats = [
-  {
-    icon: Users,
-    value: "100+",
-    label: "Members"
-  },
-  {
-    icon: MessageSquare,
-    value: "20+",
-    label: "Channels"
-  },
-  {
-    icon: HelpCircle,
-    value: "24/7",
-    label: "Support"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export function DiscordStats() {
+  const { t } = useTranslation();
+
+  const stats = [
+    {
+      icon: Users,
+      value: "100+",
+      label: t("discord.stats.members")
+    },
+    {
+      icon: MessageSquare,
+      value: "20+",
+      label: t("discord.stats.channels")
+    },
+    {
+      icon: HelpCircle,
+      value: "24/7",
+      label: t("discord.stats.support")
+    }
+  ];
+
   return (
     <div className="grid gap-4">
       {stats.map((stat, index) => (

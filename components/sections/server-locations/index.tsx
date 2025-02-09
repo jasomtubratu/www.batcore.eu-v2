@@ -4,10 +4,11 @@ import { ServerCard } from "./server-card";
 import { ServerMap } from "./server-map";
 import { serverLocations } from "./data";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ServerLocations() {
   const [pingsServer, setPingsServer] = useState<{ id: string; latest_response_time: number }[]>([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     fetch("/api/ping")
       .then((res) => res.json())
@@ -25,9 +26,11 @@ export function ServerLocations() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Our Server Locations</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            {t("serverLocations.title")}
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Strategically positioned servers for optimal performance and minimal latency.
+            {t("serverLocations.description")}
           </p>
         </motion.div>
 

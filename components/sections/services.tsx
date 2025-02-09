@@ -33,16 +33,20 @@ export function ServicesSection() {
             viewport={{ once: true }}
           >
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-blue-500/20 h-full flex flex-col">
-            <GlowingEffect
-          spread={40}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+              />
               <Box className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">{t("services.minecraft.title")}</h3>
-              <p className="text-muted-foreground mb-6 flex-grow">{t("services.minecraft.description")}</p>
+              <h3 className="text-2xl font-bold mb-2">
+                {t("services.minecraft.title")}
+              </h3>
+              <p className="text-muted-foreground mb-6 flex-grow">
+                {t("services.minecraft.description")}
+              </p>
               <Button asChild>
                 <Link href="/minecraft">{t("services.minecraft.cta")}</Link>
               </Button>
@@ -56,8 +60,12 @@ export function ServicesSection() {
           >
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-blue-500/20 h-full flex flex-col">
               <Server className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">{t("services.vps.title")}</h3>
-              <p className="text-muted-foreground mb-6 flex-grow">{t("services.vps.description")}</p>
+              <h3 className="text-2xl font-bold mb-2">
+                {t("services.vps.title")}
+              </h3>
+              <p className="text-muted-foreground mb-6 flex-grow">
+                {t("services.vps.description")}
+              </p>
               <Button asChild>
                 <Link href="/vps">{t("services.vps.cta")}</Link>
               </Button>

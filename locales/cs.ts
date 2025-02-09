@@ -1,120 +1,207 @@
-export const en = {
+export const cs = {
   nav: {
     minecraft: "Minecraft",
     vps: "VPS",
-    clientZone: "Client Zone"
+    clientZone: "Zákaznická zóna",
+  },
+  credits: {
+    hero: {
+      title: "ZÍSKEJTE EXTRA KREDIT!",
+      description:
+        "Máme několik způsobů, jak získat extra kredit. Affiliate program, soutěže a mnoho dalšího.",
+    },
+    affiliate: {
+      title: "Připojte se k našemu affiliate programu!",
+      description: "Chcete získat extra kredit? Stačí použít svůj unikátní odkaz!",
+      steps: {
+        register: {
+          title: "Zaregistrujte se!",
+          description: "Zaregistrujte se na našem portálu a získejte svůj unikátní odkaz.",
+        },
+        share: {
+          title: "Sdílejte obsah",
+          description: "Sdílejte svůj unikátní odkaz s přáteli a svou komunitou!",
+        },
+        earn: {
+          title: "Vydělávejte",
+          description:
+            "Získejte 5 % z každé platby a převeďte kredit na svůj účet.",
+        },
+        withdraw: {
+          title: "Výběr",
+          description:
+            "Vyberte kredit na svůj účet nebo jej použijte k nákupu služeb.",
+        },
+      },
+    },
+    testing: {
+      title: "Chcete si vyzkoušet naše služby?",
+      description:
+        "Žádný problém! Můžete si naše služby otestovat a získat kredit na svůj účet zdarma!",
+      code: "Promo kód",
+      notice: "Kód můžete uplatnit v sekci Dobití kreditu",
+    },
+    discord: {
+      title: "Připojte se k našemu Discordu!",
+      description:
+        "Připojte se k našemu Discord serveru a získejte kredity v soutěžích! Čekáme na vás!",
+      button: "Připojit se",
+    },
   },
   minecraft: {
     title: "Minecraft Hosting",
-    subtitle: "Experience lag-free Minecraft gaming with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    subtitle:
+      "Zažijte bezproblémový Minecraft díky našim výkonným serverům. Okamžité nastavení, výkonný hardware a podpora 24/7.",
     packages: {
-      switchCurrency: "Switch Currency",
+      switchCurrency: "Změnit měnu",
       specs: {
         ram: "RAM",
         cpu: "CPU",
-        storage: "Storage"
+        storage: "Úložiště",
       },
-      order: "Order Now",
-      perMonth: "/month"
-    }
+      order: "Objednat nyní",
+      perMonth: "/měsíc",
+    },
   },
   vps: {
     title: "VPS Hosting",
-    subtitle: "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    subtitle:
+      "Zažijte bezproblémový VPS díky našim výkonným serverům. Okamžité nastavení, výkonný hardware a podpora 24/7.",
     packages: {
-      switchCurrency: "Switch Currency",
+      switchCurrency: "Změnit měnu",
       specs: {
         ram: "RAM",
         cpu: "vCPU",
-        storage: "Storage"
+        storage: "Úložiště",
       },
-      order: "Order Now",
-      perMonth: "/month"
-    }
+      order: "Objednat nyní",
+      perMonth: "/měsíc",
+    },
   },
   hero: {
-    title: "Premium Game Hosting",
-    subtitle: "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
-    getStarted: "Get Started",
-    learnMore: "Learn More",
+    title: "Prémiový herní hosting",
+    subtitle:
+      "Zažijte bleskový výkon s našimi prémiovými hostingovými řešeními. Vytvořeno hráči pro hráče.",
+    getStarted: "Začít",
+    learnMore: "Více informací",
     stats: {
-      uptime: "Uptime",
-      latency: "Latency",
-      support: "Support"
-    }
+      uptime: "Dostupnost",
+      latency: "Odezva",
+      support: "Podpora",
+    },
   },
   services: {
-    title: "Our Services",
-    description: "Choose from our range of premium hosting solutions",
+    title: "Naše služby",
+    description: "Vyberte si z naší nabídky prémiových hostingových řešení",
     minecraft: {
       title: "Minecraft Hosting",
-      description: "High-performance Minecraft servers with instant setup, automatic backups, and 24/7 support.",
-      cta: "View Minecraft Plans"
+      description:
+        "Vysoce výkonné Minecraft servery s okamžitým nastavením, automatickými zálohami a podporou 24/7.",
+      cta: "Zobrazit plány Minecraft",
     },
     vps: {
-      title: "VPS Servers",
-      description: "Powerful virtual private servers with full root access, perfect for any application or game server.",
-      cta: "Explore VPS Options"
-    }
+      title: "VPS Servery",
+      description:
+        "Výkonné virtuální servery s plným root přístupem, ideální pro jakoukoliv aplikaci nebo herní server.",
+      cta: "Prozkoumat VPS možnosti",
+    },
   },
   aboutUs: {
-    title: "About BatCore",
-    description: "We're passionate about providing the best gaming experience through cutting-edge server technology and exceptional support.",
+    title: "O BatCore",
+    description:
+      "Jsme nadšení pro poskytování nejlepšího herního zážitku prostřednictvím špičkové serverové technologie a vynikající podpory.",
     values: {
       reliability: {
-        title: "Reliability",
-        description: "99% uptime guarantee with enterprise-grade infrastructure"
+        title: "Spolehlivost",
+        description:
+          "99% garance dostupnosti s enterprise infrastrukturou",
       },
       community: {
-        title: "Community",
-        description: "Building lasting relationships with our players"
+        title: "Komunita",
+        description: "Budujeme trvalé vztahy s našimi hráči",
       },
       innovation: {
-        title: "Innovation",
-        description: "Always at the forefront of hosting technology"
+        title: "Inovace",
+        description: "Vždy na špičce hostingové technologie",
       },
       passion: {
-        title: "Passion",
-        description: "Dedicated to creating the best gaming experience"
-      }
-    }
+        title: "Vášeň",
+        description: "Oddaní tvorbě nejlepšího herního zážitku",
+      },
+    },
   },
   footer: {
-    truestpilot: {
-      title: "We are rated",
-      rating: "Excellent",
+    trustpilot: {
+      title: "Jsme hodnoceni",
+      rating: "Vynikající",
     },
     company: {
-      title: "Company",
-      about: "About Us",
-      careers: "Careers",
-      blog: "Blog"
+      title: "Společnost",
+      about: "O nás",
+      careers: "Kariéra",
+      blog: "Blog",
     },
     contact: {
-      title: "Contact",
-      support: "Support",
-      sales: "Sales",
-      address: "Address"
+      title: "Kontakt",
+      support: "Podpora",
+      sales: "Prodej",
+      address: "Adresa",
     },
     links: {
-      title: "Links",
-      vop: "Terms of Service",
-      client: "Client Zone",
-      knowledgeBase: "Knowledge Base",
+      title: "Odkazy",
+      vop: "Podmínky služby",
+      client: "Zákaznická zóna",
+      knowledgeBase: "Databáze znalostí",
     },
     social: {
-      title: "Follow Us",
+      title: "Sledujte nás",
       twitter: "Twitter",
       facebook: "Facebook",
       instagram: "Instagram",
-      discord: "Discord"
+      discord: "Discord",
     },
-    rights: "All rights reserved"
+    rights: "Všechna práva vyhrazena",
   },
-  serverLocation: {
-    title: "Server Locations",
-    description: "Choose from our strategically placed data centers",
-    test: "Test Connection",
-    testPing: "Testing ping...",
-  }
+  serverLocations: {
+    title: "Lokace serverů",
+    description: "Vyberte si z našich strategicky umístěných datacenter",
+  },
+  discord: {
+    title: "Připojte se k naší komunitě",
+    description:
+      "Spojte se s ostatními hráči a získejte okamžitou podporu na našem Discord serveru",
+    button: "Připojit se k našemu Discordu",
+    stats: {
+      members: "Členové",
+      support: "Podpora",
+      channels: "Kanály",
+    }
+  },
+  whychooseus: {
+    title: "Proč si vybrat BatCore?",
+    description:
+      "Poskytujeme špičková hostingová řešení s bezkonkurenčním výkonem a spolehlivostí.",
+    features: {
+      security: {
+        title: "Bezpečnost na úrovni podniku",
+        description:
+          "Ochrana proti všem typům útoků díky našim pokročilým bezpečnostním opatřením",
+      },
+      performance: {
+        title: "Vysoký výkon",
+        description:
+          "Nejnovější generace hardwaru pro optimální výkon a rychlost",
+      },
+      uptime: {
+        title: "99% dostupnost",
+        description:
+          "Garantovaná dostupnost díky redundantní infrastruktuře a záložním systémům",
+      },
+      support: {
+        title: "Podpora 24/7",
+        description:
+          "Odborný tým podpory je k dispozici nonstop, aby vám pomohl",
+      },
+    }
+  },
 };

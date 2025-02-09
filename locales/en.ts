@@ -162,10 +162,46 @@ export const en = {
     },
     rights: "All rights reserved",
   },
-  serverLocation: {
+  serverLocations: {
     title: "Server Locations",
     description: "Choose from our strategically placed data centers",
-    test: "Test Connection",
-    testPing: "Testing ping...",
+  },
+  discord: {
+    title: "Join Our Community",
+    description:
+      "Connect with other players and get instant support on our Discord server",
+    button: "Join Our Discord",
+    stats: {
+      members: "Members",
+      support: "Support",
+      channels: "Channels",
+    }
+  },
+  whychooseus: {
+    title: "Why Choose BatCore?",
+    description:
+      "We provide industry-leading hosting solutions with unmatched performance and reliability.",
+    features: {
+      security: {
+        title: "Enterprise-grade Security",
+        description:
+          "Protection against all types of attacks with our advanced security measures",
+      },
+      performance: {
+        title: "High Performance",
+        description:
+          "Latest generation hardware for optimal performance and speed",
+      },
+      uptime: {
+        title: "99% Uptime",
+        description:
+          "Guaranteed uptime with redundant infrastructure and failover systems",
+      },
+      support: {
+        title: "24/7 Support",
+        description:
+          "Expert support team available around the clock to assist you",
+      },
+    }
   },
 };

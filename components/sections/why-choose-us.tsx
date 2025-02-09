@@ -4,8 +4,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Cpu, Clock, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { GlowingEffect } from "../ui/glowing-effect";
+import { useTranslation } from "react-i18next";
 
 export function WhyChooseUs() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Shield,
+      title: t("whychooseus.features.security.title"),
+      description: t("whychooseus.features.security.description"),
+    },
+    {
+      icon: Cpu,
+      title: t("whychooseus.features.performance.title"),
+      description: t("whychooseus.features.performance.description"),
+    },
+    {
+      icon: Clock,
+      title: t("whychooseus.features.uptime.title"),
+      description: t("whychooseus.features.uptime.description"),
+    },
+    {
+      icon: Users,
+      title: t("whychooseus.features.support.title"),
+      description: t("whychooseus.features.support.description"),
+    },
+  ];
+
+
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
@@ -15,9 +42,11 @@ export function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Why Choose BatCore?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            {t("whychooseus.title")}
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We provide industry-leading hosting solutions with unmatched performance and reliability.
+            {t("whychooseus.description")}
           </p>
         </motion.div>
 
@@ -53,26 +82,3 @@ export function WhyChooseUs() {
     </section>
   );
 }
-
-const features = [
-  {
-    icon: Shield,
-    title: "DDoS Protection",
-    description: "Enterprise-grade protection against all types of attacks",
-  },
-  {
-    icon: Cpu,
-    title: "High Performance",
-    description: "Latest generation hardware for optimal performance",
-  },
-  {
-    icon: Clock,
-    title: "99% Uptime",
-    description: "Guaranteed uptime with redundant infrastructure",
-  },
-  {
-    icon: Users,
-    title: "24/7 Support",
-    description: "Expert support team available around the clock",
-  },
-];

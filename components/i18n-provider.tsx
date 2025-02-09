@@ -6,6 +6,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { en } from "@/locales/en";
 import { cs } from "@/locales/cs";
+import { sk } from "@/locales/sk";
 import { LoadingScreen } from "@/components/loading";
 
 i18n
@@ -14,7 +15,8 @@ i18n
   .init({
     resources: {
       en: { translation: en },
-      cs: { translation: cs }
+      cs: { translation: cs },
+      sk: { translation: sk }
     },
     fallbackLng: "en",
     detection: {
