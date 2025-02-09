@@ -52,6 +52,7 @@ export const cs = {
     title: "Minecraft Hosting",
     subtitle:
       "Zažijte bezproblémový Minecraft díky našim výkonným serverům. Okamžité nastavení, výkonný hardware a podpora 24/7.",
+    description: "Naše servery Minecraft nabízejí vysoký výkon a jsou vhodné pro širokou škálu použití. Díky vysokému výkonu a neomezeným možnostem jsou ideálním řešením pro všechny, kteří chtějí hrát Minecraft s přáteli. \n Servery jsou vybaveny procesory AMD Ryzen 7 5700G - 4,6 GHz. Díky tomu naše servery zvládnou i ty nejnáročnější úlohy.",
     packages: {
       switchCurrency: "Změnit měnu",
       specs: {
@@ -67,6 +68,7 @@ export const cs = {
     title: "VPS Hosting",
     subtitle:
       "Zažijte bezproblémový VPS díky našim výkonným serverům. Okamžité nastavení, výkonný hardware a podpora 24/7.",
+      description: "Naše servery VPS jsou postaveny na nejnovějších technologiích a jsou vhodné pro širokou škálu použití. Díky vysokému výkonu a neomezeným možnostem jsou ideálním řešením pro každého, kdo potřebuje výkon a flexibilitu. Servery \nVPS jsou vybaveny procesory AMD Ryzen9-5950X. Díky tomu naše servery zvládnou i ty nejnáročnější úlohy.",
     packages: {
       switchCurrency: "Změnit měnu",
       specs: {
@@ -109,7 +111,7 @@ export const cs = {
   aboutUs: {
     title: "O BatCore",
     description:
-      "Jsme nadšení pro poskytování nejlepšího herního zážitku prostřednictvím špičkové serverové technologie a vynikající podpory.",
+      "S nadšením poskytujeme ty nejlepší herní zážitky díky špičkové serverové technologii a výjimečné podpoře.",
     values: {
       reliability: {
         title: "Spolehlivost",

@@ -42,7 +42,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
   const [currency, setCurrency] = useState<Currency>("EUR");
 
   const convertPrice = (price: number, currency: Currency) => {
-    return (price *30 * EXCHANGE_RATES[currency]).toFixed(0);
+    return (price *30 * EXCHANGE_RATES[currency]).toFixed(2);
   };
 
   return (
@@ -116,19 +116,19 @@ export function PackageGrid({ packages }: PackageGridProps) {
               <CardContent>
                 <ul className="space-y-4">
                   <Spec 
-                    icon={Cpu} 
-                    value={`${pkg.cpu}x`} 
-                    label={t("vps.packages.specs.cpu")} 
+                  icon={Cpu} 
+                  value={`${pkg.cpu}x`} 
+                  label={t("vps.packages.specs.cpu")} 
                   />
                   <Spec 
-                    icon={MemoryStick} 
-                    value={`${pkg.ram} MB`} 
-                    label={t("vps.packages.specs.ram")} 
+                  icon={MemoryStick} 
+                  value={`${(pkg.ram / 1024).toFixed(0)} GB`} 
+                  label={t("vps.packages.specs.ram")} 
                   />
                   <Spec 
-                    icon={HardDrive} 
-                    value={`${pkg.disk} MB`} 
-                    label={t("vps.packages.specs.storage")} 
+                  icon={HardDrive} 
+                  value={`${(pkg.disk / 1024).toFixed(0)} GB`} 
+                  label={t("vps.packages.specs.storage")} 
                   />
                 </ul>
               </CardContent>

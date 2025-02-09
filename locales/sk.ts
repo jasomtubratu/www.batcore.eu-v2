@@ -52,6 +52,7 @@ export const sk = {
       title: "Minecraft Hosting",
       subtitle:
         "Zažite plynulý Minecraft vďaka našim výkonným serverom. Okamžité nastavenie, výkonný hardvér a podpora 24/7.",
+      description: "Naše servery Minecraft ponúkajú vysoký výkon a sú vhodné na širokú škálu použití. Vďaka vysokému výkonu a neobmedzeným možnostiam sú dokonalým riešením pre všetkých, ktorí chcú hrať Minecraft s priateľmi. \n Servery sú vybavené procesormi AMD Ryzen 7 5700G - 4,6 GHz. Vďaka tomu naše servery zvládnu aj tie najnáročnejšie úlohy.",
       packages: {
         switchCurrency: "Zmeniť menu",
         specs: {
@@ -67,6 +68,7 @@ export const sk = {
       title: "VPS Hosting",
       subtitle:
         "Zažite výkonný VPS s našimi špičkovými servermi. Okamžité nastavenie, výkonný hardvér a podpora 24/7.",
+    description: "Naše servery VPS sú postavené na najnovších technológiách a sú vhodné na široké spektrum použitia. Vďaka vysokému výkonu a neobmedzeným možnostiam sú ideálnym riešením pre všetkých, ktorí potrebujú výkon a flexibilitu. Servery \nVPS sú vybavené procesormi AMD Ryzen9-5950X. Vďaka tomu naše servery zvládnu aj tie najnáročnejšie úlohy.",
       packages: {
         switchCurrency: "Zmeniť menu",
         specs: {
@@ -203,7 +205,6 @@ export const sk = {
               "Odborný tím podpory je k dispozícii nonstop, aby vám pomohol",
           },
         }
-      },
-    
+      },    
   };
   

@@ -116,19 +116,19 @@ export function PackageGrid({ packages }: PackageGridProps) {
               <CardContent>
                 <ul className="space-y-4">
                   <Spec 
-                    icon={Cpu} 
-                    value={`${pkg.cpu}%`} 
-                    label={t("minecraft.packages.specs.cpu")} 
+                  icon={Cpu} 
+                  value={`${pkg.cpu}%`} 
+                  label={t("minecraft.packages.specs.cpu")} 
                   />
                   <Spec 
-                    icon={MemoryStick} 
-                    value={`${pkg.ram} MB`} 
-                    label={t("minecraft.packages.specs.ram")} 
+                  icon={MemoryStick} 
+                  value={`${(pkg.ram / 1024).toFixed(0)} GB`} 
+                  label={t("minecraft.packages.specs.ram")} 
                   />
                   <Spec 
-                    icon={HardDrive} 
-                    value={`${pkg.disk} MB`} 
-                    label={t("minecraft.packages.specs.storage")} 
+                  icon={HardDrive} 
+                  value={`${(pkg.disk / 1024).toFixed(0)} GB`} 
+                  label={t("minecraft.packages.specs.storage")} 
                   />
                 </ul>
               </CardContent>

@@ -19,6 +19,9 @@ export function HeroSection() {
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           {t("vps.subtitle")}
         </p>
+        <p className="text-muted-foreground  mx-auto mt-4">
+        {t("vps.description")}
+        </p>
       </div>
     </section>
   );

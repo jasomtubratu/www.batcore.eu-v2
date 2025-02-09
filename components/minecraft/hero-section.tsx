@@ -20,9 +20,7 @@ export function HeroSection() {
           {t("minecraft.subtitle")}
         </p>
         <p className="text-muted-foreground  mx-auto mt-4">
-        Our Minecraft servers offer high performance and are suitable for a wide range of uses. With high performance and unlimited possibilities, they are the perfect solution for everyone who wants to play Minecraft with friends.
-
-The servers are equipped with AMD Ryzen 7 5700G processors - 4.6 GHz. This ensures that our servers can handle even the most demanding tasks.
+        {t("minecraft.description")}
         </p>
       </div>
     </section>

@@ -52,6 +52,7 @@ export const en = {
     title: "Minecraft Hosting",
     subtitle:
       "Experience lag-free Minecraft gaming with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    description: "Our Minecraft servers offer high performance and are suitable for a wide range of uses. High performance and unlimited possibilities make them ideal for anyone who wants to play Minecraft with friends. \n Servers are equipped with AMD Ryzen 7 5700G - 4.6 GHz processors. Thanks to this, our servers can handle even the most demanding tasks.",
     packages: {
       switchCurrency: "Switch Currency",
       specs: {
@@ -67,6 +68,7 @@ export const en = {
     title: "VPS Hosting",
     subtitle:
       "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    description: "Our VPS servers are built on the latest technologies and are suitable for a wide range of uses. With high performance and unlimited possibilities, they are the perfect solution for everyone who needs power and flexibility. \nVPS servers are equipped with AMD Ryzen9-5950X processors. This ensures that our servers can handle even the most demanding tasks.",
     packages: {
       switchCurrency: "Switch Currency",
       specs: {
