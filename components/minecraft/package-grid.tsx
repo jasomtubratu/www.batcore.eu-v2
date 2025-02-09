@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { Memory, Cpu, HardDrive, Database, Archive, Network, MemoryStick } from "lucide-react";
-import { LoadingScreen } from "../loading";
+import { MemoryStick, Cpu, HardDrive } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
+import { GlowingEffect } from "../ui/glowing-effect";
 
 interface Package {
   id: string;
@@ -14,73 +16,157 @@ interface Package {
   ram: number;
   cpu: number;
   disk: number;
-  databases: number;
-  backups: number;
-  allocations: number;
+  image: string;
 }
 
 interface PackageGridProps {
   packages: Package[];
-  isLoading: boolean;
-  error: any;
+}
+
+type Currency = "EUR" | "CZK" | "CREDITS";
+
+const EXCHANGE_RATES = {
+  EUR: 1,
+  CZK: 25,
+  CREDITS: 100
+};
+
+const CURRENCY_SYMBOLS = {
+  EUR: "€",
+  CZK: "Kč",
+  CREDITS: "Kre"
+};
+
+export function PackageGrid({ packages }: PackageGridProps) {
+  const { t } = useTranslation();
+  const [currency, setCurrency] = useState<Currency>("EUR");
+
+  const convertPrice = (price: number, currency: Currency) => {
+    return (price * EXCHANGE_RATES[currency]).toFixed(2);
+  };
+
+  return (
+    <>
+      <div className="flex justify-end mb-8">
+        <div className="flex gap-2">
+          {(Object.keys(EXCHANGE_RATES) as Currency[]).map((curr) => (
+            <Button
+              key={curr}
+              variant={currency === curr ? "default" : "outline"}
+              onClick={() => setCurrency(curr)}
+              size="sm"
+            >
+              {curr}
+            </Button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {packages
+        .sort((a, b) => a.cost - b.cost)
+        .map((pkg, index) => (
+          <motion.div
+            key={pkg.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <Card className="h-full bg-card/50 backdrop-blur-sm border-blue-500/20 relative overflow-hidden">
+            <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+              {pkg.image && (
+                <div className="absolute top-0 left-0 right-0 h-32 flex items-center justify-center p-4">
+                  <Image
+                    src={pkg.image}
+                    alt={pkg.name}
+                    layout="fill"
+                    objectFit="contain"
+                    className="max-h-full"
+                  />
+                </div>
+              )}
+              
+              <CardHeader className={pkg.image ? "pt-36" : ""}>
+                <motion.h3 
+                  className="text-2xl font-bold text-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {pkg.name}
+                </motion.h3>
+                <motion.p 
+                  className="text-3xl font-bold text-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {CURRENCY_SYMBOLS[currency]}{convertPrice(pkg.cost, currency)}
+                  <span className="text-sm text-muted-foreground">{t("minecraft.packages.perMonth")}</span>
+                </motion.p>
+              </CardHeader>
+              
+              <CardContent>
+                <ul className="space-y-4">
+                  <Spec 
+                    icon={Cpu} 
+                    value={`${pkg.cpu}%`} 
+                    label={t("minecraft.packages.specs.cpu")} 
+                  />
+                  <Spec 
+                    icon={MemoryStick} 
+                    value={`${pkg.ram} MB`} 
+                    label={t("minecraft.packages.specs.ram")} 
+                  />
+                  <Spec 
+                    icon={HardDrive} 
+                    value={`${pkg.disk} MB`} 
+                    label={t("minecraft.packages.specs.storage")} 
+                  />
+                </ul>
+              </CardContent>
+              
+              <CardFooter>
+                <Button 
+                  className="w-full"
+                  asChild
+                >
+                  <a 
+                    href="https://client.batcore.eu/panel/service" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    {t("minecraft.packages.order")}
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </>
+  );
 }
 
 function Spec({ icon: Icon, value, label }: { icon: any; value: string | number; label: string }) {
   return (
-    <li className="flex items-center gap-2">
+    <motion.li 
+      className="flex items-center gap-2"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.4 }}
+    >
       <Icon className="w-5 h-5 text-blue-400" />
       <span>
         {value} {label}
       </span>
-    </li>
-  );
-}
-
-export function PackageGrid({ packages, isLoading, error }: PackageGridProps) {
-  const { t } = useTranslation();
-
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
-
-  if (error) {
-    return <div className="text-center text-red-500">{t("packages.error")}</div>;
-  }
-
-  return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {packages.map((pkg, index) => (
-        <motion.div
-          key={pkg.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <Card className="h-full bg-card/50 backdrop-blur-sm border-blue-500/20">
-            <CardHeader>
-              <h3 className="text-2xl font-bold">{pkg.name}</h3>
-              <p className="text-3xl font-bold">
-                €{pkg.cost}
-                <span className="text-sm text-muted-foreground">/month</span>
-              </p>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-4">
-                <Spec icon={MemoryStick} value={`${pkg.ram} MB`} label="RAM" />
-                <Spec icon={Cpu} value={`${pkg.cpu}%`} label="CPU" />
-                <Spec icon={HardDrive} value={`${pkg.disk} MB`} label="Storage" />
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button className="w-full" asChild>
-                <a href={`https://client.batcore.eu/order/${pkg.id}`} target="_blank" rel="noopener noreferrer">
-                  {t("packages.order")}
-                </a>
-              </Button>
-            </CardFooter>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
+    </motion.li>
   );
 }

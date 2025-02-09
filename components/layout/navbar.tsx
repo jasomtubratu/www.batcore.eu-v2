@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Menu, X, Server } from "lucide-react";
+import Image from "next/image";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
@@ -23,7 +24,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <Server className="w-6 h-6 text-blue-400" />
+            <Image src="/favicon.ico" alt="BatCore.eu" width={32} height={32} />
             <span className="text-xl font-bold">BatCore.eu</span>
           </Link>
 

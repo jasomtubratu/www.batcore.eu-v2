@@ -4,6 +4,20 @@ export const en = {
     vps: "VPS",
     clientZone: "Client Zone"
   },
+  minecraft: {
+    title: "Minecraft Hosting",
+    subtitle: "Experience lag-free Minecraft gaming with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    packages: {
+      switchCurrency: "Switch Currency",
+      specs: {
+        ram: "RAM",
+        cpu: "CPU",
+        storage: "Storage"
+      },
+      order: "Order Now",
+      perMonth: "/month"
+    }
+  },
   hero: {
     title: "Premium Game Hosting",
     subtitle: "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
