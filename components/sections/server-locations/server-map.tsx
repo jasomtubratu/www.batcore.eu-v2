@@ -14,7 +14,7 @@ export function ServerMap({ locations }: ServerMapProps) {
       <Image
         src="/mapa2.png"
         layout="fill"
-        objectFit="object-cover"
+        objectFit="cover"
         alt="Server Map"
       />
       {locations.map((location, index) => (

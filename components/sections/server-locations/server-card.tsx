@@ -1,29 +1,11 @@
-"use client";
-
 import { Card } from "@/components/ui/card";
 import { ServerLocation } from "./types";
 import { motion } from "framer-motion";
 import { Activity, Signal } from "lucide-react";
-import { useEffect, useState } from "react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Badge } from "@/components/ui/badge";
 
-export function ServerCard({ name, status, location, ip, id, type }: ServerLocation) {
-  const [ping, setPing] = useState<number | null>(null);
-
-  useEffect(() => {
-    const fetchPing = async () => {
-      try {
-        const res = await fetch(`/api/ping/${id}`);
-        const data = await res.json();
-        setPing(data.ping);
-      } catch (error) {
-        setPing(null);
-      }
-    }
-    fetchPing();
-  }, [id]);
-
+export function ServerCard({ name, status, location, ping, id, type }: ServerLocation) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -46,11 +28,13 @@ export function ServerCard({ name, status, location, ip, id, type }: ServerLocat
             <p className="text-muted-foreground text-sm">{location}</p>
           </div>
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
+            {ping && (
+              <div className="flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-400" />
-              <span className="text-sm">10ms</span>
+              <span className="text-sm">{ping + " ms"}</span>
             </div>
-            <Signal className={`w-4 h-4 ${status === 'active' ? 'text-green-400' : 'text-red-400'}`} />
+            )}
+            <Signal className={`w-4 h-4 ${ping ? 'text-green-400' : 'text-red-400'}`} />
           </div>
         </div>
       </Card>

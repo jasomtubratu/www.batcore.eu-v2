@@ -42,7 +42,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
   const [currency, setCurrency] = useState<Currency>("EUR");
 
   const convertPrice = (price: number, currency: Currency) => {
-    return (price * EXCHANGE_RATES[currency]).toFixed(2);
+    return (price * 30 * EXCHANGE_RATES[currency]).toFixed(2);
   };
 
   return (

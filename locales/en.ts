@@ -2,82 +2,133 @@ export const en = {
   nav: {
     minecraft: "Minecraft",
     vps: "VPS",
-    clientZone: "Client Zone"
+    clientZone: "Client Zone",
+  },
+  credits: {
+    hero: {
+      title: "GET EXTRA CREDIT!",
+      description:
+        "We have several ways to get extra credit. Affiliate, contests, and much more.",
+    },
+    affiliate: {
+      title: "Join our Affiliate Program!",
+      description: "Want to get extra credit? Just use your unique link!",
+      steps: {
+        register: {
+          title: "Sign Up!",
+          description: "Register on our portal and get your unique link.",
+        },
+        share: {
+          title: "Share Content",
+          description: "Share your unique link with friends and your audience!",
+        },
+        earn: {
+          title: "Earn",
+          description:
+            "Earn 5% from every payment and get credits to your account.",
+        },
+        withdraw: {
+          title: "Withdraw",
+          description:
+            "Withdraw credits to your account or use them to purchase services.",
+        },
+      },
+    },
+    testing: {
+      title: "Want to test our services?",
+      description:
+        "No problem! You can test our services and get credits to your account for free!",
+      code: "Promo Code",
+      notice: "You can apply the code in the Credit Recharge section",
+    },
+    discord: {
+      title: "Join our Discord!",
+      description:
+        "Join our Discord server and get credits from contests! We are waiting for you!",
+      button: "Join",
+    },
   },
   minecraft: {
     title: "Minecraft Hosting",
-    subtitle: "Experience lag-free Minecraft gaming with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    subtitle:
+      "Experience lag-free Minecraft gaming with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
     packages: {
       switchCurrency: "Switch Currency",
       specs: {
         ram: "RAM",
         cpu: "CPU",
-        storage: "Storage"
+        storage: "Storage",
       },
       order: "Order Now",
-      perMonth: "/month"
-    }
+      perMonth: "/month",
+    },
   },
   vps: {
     title: "VPS Hosting",
-    subtitle: "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
+    subtitle:
+      "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
     packages: {
       switchCurrency: "Switch Currency",
       specs: {
         ram: "RAM",
         cpu: "vCPU",
-        storage: "Storage"
+        storage: "Storage",
       },
       order: "Order Now",
-      perMonth: "/month"
-    }
+      perMonth: "/month",
+    },
   },
   hero: {
     title: "Premium Game Hosting",
-    subtitle: "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
+    subtitle:
+      "Experience lightning-fast performance with our premium hosting solutions. Built for gamers, by gamers.",
     getStarted: "Get Started",
     learnMore: "Learn More",
     stats: {
       uptime: "Uptime",
       latency: "Latency",
-      support: "Support"
-    }
+      support: "Support",
+    },
   },
   services: {
     title: "Our Services",
     description: "Choose from our range of premium hosting solutions",
     minecraft: {
       title: "Minecraft Hosting",
-      description: "High-performance Minecraft servers with instant setup, automatic backups, and 24/7 support.",
-      cta: "View Minecraft Plans"
+      description:
+        "High-performance Minecraft servers with instant setup, automatic backups, and 24/7 support.",
+      cta: "View Minecraft Plans",
     },
     vps: {
       title: "VPS Servers",
-      description: "Powerful virtual private servers with full root access, perfect for any application or game server.",
-      cta: "Explore VPS Options"
-    }
+      description:
+        "Powerful virtual private servers with full root access, perfect for any application or game server.",
+      cta: "Explore VPS Options",
+    },
   },
   aboutUs: {
     title: "About BatCore",
-    description: "We're passionate about providing the best gaming experience through cutting-edge server technology and exceptional support.",
+    description:
+      "We're passionate about providing the best gaming experience through cutting-edge server technology and exceptional support.",
     values: {
       reliability: {
         title: "Reliability",
-        description: "99% uptime guarantee with enterprise-grade infrastructure"
+        description:
+          "99% uptime guarantee with enterprise-grade infrastructure",
       },
       community: {
         title: "Community",
-        description: "Building lasting relationships with our players"
+        description: "Building lasting relationships with our players",
       },
       innovation: {
         title: "Innovation",
-        description: "Always at the forefront of hosting technology"
+        description: "Always at the forefront of hosting technology",
       },
       passion: {
         title: "Passion",
-        description: "Dedicated to creating the best gaming experience"
-      }
-    }
+        description: "Dedicated to creating the best gaming experience",
+      },
+    },
   },
   footer: {
     trustpilot: {
@@ -88,13 +139,13 @@ export const en = {
       title: "Company",
       about: "About Us",
       careers: "Careers",
-      blog: "Blog"
+      blog: "Blog",
     },
     contact: {
       title: "Contact",
       support: "Support",
       sales: "Sales",
-      address: "Address"
+      address: "Address",
     },
     links: {
       title: "Links",
@@ -107,14 +158,14 @@ export const en = {
       twitter: "Twitter",
       facebook: "Facebook",
       instagram: "Instagram",
-      discord: "Discord"
+      discord: "Discord",
     },
-    rights: "All rights reserved"
+    rights: "All rights reserved",
   },
   serverLocation: {
     title: "Server Locations",
     description: "Choose from our strategically placed data centers",
     test: "Test Connection",
     testPing: "Testing ping...",
-  }
+  },
 };
