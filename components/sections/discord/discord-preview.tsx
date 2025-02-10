@@ -8,7 +8,7 @@ export function DiscordPreview() {
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      className="relative aspect-video rounded-lg overflow-hidden bg-[#36393f] border border-[#202225]"
+      className="relative w-full rounded-lg overflow-hidden bg-[#36393f] border border-[#202225] h-96"
     >
       <iframe
         src="https://discord.com/widget?id=1263601764507189260&theme=dark"

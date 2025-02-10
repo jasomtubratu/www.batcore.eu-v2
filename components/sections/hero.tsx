@@ -38,7 +38,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="mt-12 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
