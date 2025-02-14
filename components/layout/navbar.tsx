@@ -3,9 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Menu, X, Server } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const LANGUAGES = [
@@ -62,6 +61,9 @@ function NavLinks() {
       <Link href="/vps" className="hover:text-primary">
         {t("nav.vps")}
       </Link>
+      <Link href="/credits" className="hover:text-primary">
+        {t("nav.credits")}
+      </Link>
       <Link href="https://client.batcore.eu" className="hover:text-primary">
         {t("nav.clientZone")}
       </Link>
@@ -72,7 +74,6 @@ function NavLinks() {
 function LanguageSelector() {
   const { i18n } = useTranslation();
 
-  // Default to English if the current language is not in the predefined list
   const currentLanguage = LANGUAGES.some(lang => lang.code === i18n.language) ? i18n.language : "en";
 
   return (

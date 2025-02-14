@@ -40,7 +40,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     i18n.on("languageChanged", handleLanguageChange);
     handleLanguageChange();
 
-    // Simulate loading time for language detection and resources
+    // Ak toto dám preč tak sa loading screen zasekne
     setTimeout(() => setIsLoading(false), 1000);
 
     return () => {

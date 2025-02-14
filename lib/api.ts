@@ -1,6 +1,6 @@
 export async function getPackages(type: number) {
     const res = await fetch('https://client.batcore.eu/api/packages', {
-      next: { revalidate: 600 } 
+      next: { revalidate: 600 } // 10 minut cache
     });
     
     if (!res.ok) {

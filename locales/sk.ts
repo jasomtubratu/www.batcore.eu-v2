@@ -2,6 +2,7 @@ export const sk = {
     nav: {
       minecraft: "Minecraft",
       vps: "VPS",
+      credits: "Získajte Kredity",
       clientZone: "Zákaznícka zóna",
     },
     credits: {

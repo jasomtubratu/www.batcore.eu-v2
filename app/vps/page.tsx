@@ -4,8 +4,6 @@ import { BackgroundAnimation } from "@/components/background-animation";
 import { HeroSection } from "@/components/vps/hero-section";
 import { getPackages } from "@/lib/api";
 
-export const revalidate = 60;
-
 export default async function VPSPage() {
   const packages = await getPackages(2);
 

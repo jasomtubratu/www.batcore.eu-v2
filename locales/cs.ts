@@ -2,6 +2,7 @@ export const cs = {
   nav: {
     minecraft: "Minecraft",
     vps: "VPS",
+    credits: "Získejte Kredity",
     clientZone: "Zákaznická zóna",
   },
   credits: {
