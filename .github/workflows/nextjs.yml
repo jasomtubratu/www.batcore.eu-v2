@@ -31,13 +31,14 @@ jobs:
         VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
         VPS_IP: "57.128.212.249"
       run: |
+        # Set up SSH key securely
         mkdir -p ~/.ssh
-        echo "$VPS_SSH_KEY" | base64 --decode > ~/.ssh/vps_key
+        echo "$VPS_SSH_KEY" | tr -d '\r' > ~/.ssh/vps_key  # Ensure no carriage returns
         chmod 600 ~/.ssh/vps_key
         ssh-keyscan -H "$VPS_IP" >> ~/.ssh/known_hosts
         
         # Deploy files using rsync (excludes unnecessary directories)
-        rsync -avz --delete -e "ssh -i ~/.ssh/vps_key" --exclude=".git" --exclude="node_modules" ./ root@"$VPS_IP":/var/www/batcore2/
+        rsync -avz --delete -e "ssh -i ~/.ssh/vps_key -o StrictHostKeyChecking=no" --exclude=".git" --exclude="node_modules" ./ root@"$VPS_IP":/var/www/batcore2/
 
         # SSH into VPS and restart services
         ssh -i ~/.ssh/vps_key root@"$VPS_IP" << 'EOF'
