@@ -1,0 +1,22 @@
+
+# General Information
+# This file provides rules for security researchers and other individuals who wish to report security vulnerabilities they discover on BatCore.eu. We appreciate your efforts to keep our users and systems secure. Please follow the information below to responsibly disclose vulnerabilities.
+
+# Contact Information
+Contact: mailto:info@batcore.sk
+
+# Policy
+We kindly request that security researchers act in good faith when reporting vulnerabilities to us, and:
+- Do not perform tests that may disrupt services or data of our users.
+- Refrain from accessing private or sensitive information that does not belong to you.
+- Give us a reasonable amount of time to respond and remediate the reported issue before publicly disclosing any details.
+
+We will make every effort to respond promptly to any security reports, and depending on the nature of the vulnerability, we MAY offer some recognition or a small bounty for your responsible disclosure.
+
+
+# Legal
+We do not authorize any activity that is illegal or that violates our Terms of Service or Acceptable Use Policy. We do not permit security research activities that result in harm to our customers, employees, or infrastructure.
+
+Thank you for your commitment to helping us maintain the security of our platform.
+
+# End of File
