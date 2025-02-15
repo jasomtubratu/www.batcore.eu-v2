@@ -23,7 +23,7 @@ export function Navbar() {
 
     let urlAnimate = () => {
       window.location.hash = emojis[Math.floor(Math.random() * emojis.length)];
-      setTimeout(urlAnimate, 1000);
+      setTimeout(urlAnimate, 10000);
   };
 
   urlAnimate();
