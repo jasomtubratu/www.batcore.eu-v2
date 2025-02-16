@@ -2,6 +2,7 @@ export const en = {
   nav: {
     minecraft: "Minecraft",
     credits: "Get Credits",
+    wiki: "Knowledge Base",
     vps: "VPS",
     clientZone: "Client Zone",
   },

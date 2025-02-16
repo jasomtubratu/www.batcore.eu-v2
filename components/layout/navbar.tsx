@@ -20,13 +20,11 @@ export function Navbar() {
 
   function emojiFun() {
     const emojis = ["🦇", "⚡", "🔋", "💀", "🔊"];
-
     let urlAnimate = () => {
       window.location.hash = emojis[Math.floor(Math.random() * emojis.length)];
       setTimeout(urlAnimate, 10000);
-  };
-
-  urlAnimate();
+    };
+    urlAnimate();
   }
 
   useEffect(() => {
@@ -37,13 +35,18 @@ export function Navbar() {
     <nav className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image src="/favicon.ico" alt="BatCore.eu" width={32} height={32} />
-            <span className="text-xl font-bold">BatCore.eu</span>
-          </Link>
+          <div className="flex items-center space-x-8">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/favicon.ico" alt="BatCore.eu" width={32} height={32} />
+              <span className="text-xl font-bold">BatCore.eu</span>
+            </Link>
+            <div className="hidden md:flex items-center space-x-4">
+            <NavLinksLeft  />
+            </div>  
+          </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <NavLinks />
+            <NavLinksRight />
             <LanguageSelector />
           </div>
 
@@ -56,7 +59,8 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden p-4 border-t border-border">
           <div className="flex flex-col space-y-4">
-            <NavLinks />
+            <NavLinksLeft />
+            <NavLinksRight />
             <LanguageSelector />
           </div>
         </div>
@@ -65,9 +69,8 @@ export function Navbar() {
   );
 }
 
-function NavLinks() {
+function NavLinksLeft() {
   const { t } = useTranslation();
-  
   return (
     <>
       <Link href="/minecraft" className="hover:text-primary">
@@ -79,7 +82,18 @@ function NavLinks() {
       <Link href="/credits" className="hover:text-primary">
         {t("nav.credits")}
       </Link>
-      <Link href="https://client.batcore.eu" className="hover:text-primary">
+    </>
+  );
+}
+
+function NavLinksRight() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <Link href="https://wiki.batcore.eu" className="hover:text-primary">
+        {t("nav.wiki")}
+      </Link>
+      <Link href="https://client.batcore.eu" className="hover:text-primary md:bg-blue-500/20 md:px-4 md:py-2 md:rounded-md">
         {t("nav.clientZone")}
       </Link>
     </>
@@ -88,9 +102,7 @@ function NavLinks() {
 
 function LanguageSelector() {
   const { i18n } = useTranslation();
-
   const currentLanguage = LANGUAGES.some(lang => lang.code === i18n.language) ? i18n.language : "en";
-
   return (
     <Select value={currentLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
       <SelectTrigger className="w-[120px]">

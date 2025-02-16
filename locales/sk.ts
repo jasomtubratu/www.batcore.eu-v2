@@ -3,6 +3,7 @@ export const sk = {
       minecraft: "Minecraft",
       vps: "VPS",
       credits: "Získajte Kredity",
+      wiki: "Databáza znalostí",
       clientZone: "Zákaznícka zóna",
     },
     credits: {
