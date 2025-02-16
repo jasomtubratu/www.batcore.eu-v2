@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -17,19 +17,6 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  function emojiFun() {
-    const emojis = ["🦇", "⚡", "🔋", "💀", "🔊"];
-    let urlAnimate = () => {
-      window.location.hash = emojis[Math.floor(Math.random() * emojis.length)];
-      setTimeout(urlAnimate, 10000);
-    };
-    urlAnimate();
-  }
-
-  useEffect(() => {
-    emojiFun();
-  }, []);
 
   return (
     <nav className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b border-border">

@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { I18nProvider } from "@/components/i18n-provider";
 import AffiliateProvider from "./AffiliateProvider";
+import FunProvider from "./FunProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <AffiliateProvider />
+        <FunProvider />
         <I18nProvider>
           <Navbar />
           {children}
