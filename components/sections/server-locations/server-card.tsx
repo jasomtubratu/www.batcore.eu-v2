@@ -31,7 +31,7 @@ export function ServerCard({ name, status, location, ping, id, type }: ServerLoc
             {ping && (
               <div className="flex items-center gap-2">
               <Activity className="w-4 h-4 text-blue-400" />
-              <span className="text-sm">{ping + " ms"}</span>
+              <span className="text-sm">{Number(ping).toFixed(1) + " ms"}</span>
             </div>
             )}
             <Signal className={`w-4 h-4 ${ping ? 'text-green-400' : 'text-red-400'}`} />

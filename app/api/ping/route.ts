@@ -7,7 +7,6 @@ export async function GET() {
         return NextResponse.json({ error: "Missing API Key" }, { status: 500 });
     }
 
-    // Fetch response times for each server location individually
     const headers = { Authorization: `Bearer ${apiKey}` };
     const results = [];
 
