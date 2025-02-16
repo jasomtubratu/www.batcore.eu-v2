@@ -194,7 +194,7 @@ export const sk = {
           performance: {
             title: "Vysoký výkon",
             description:
-              "Najnovšia generácia hardvéru pre optimálny výkon a rýchlosť",
+              "Najnovšia generácia hardvéru pre optimálny výkon a rýchlosť našich služieb",
           },
           uptime: {
             title: "99% dostupnosť",
