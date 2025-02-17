@@ -21,13 +21,24 @@ export function ServerMap({ locations }: ServerMapProps) {
         <motion.div
           key={index}
           className="absolute w-3 h-3"
-          style={{ left: `${location.coordinates.x}%`, top: `${location.coordinates.y}%` }}
+          style={{
+            left: `${location.coordinates.x}%`,
+            top: `${location.coordinates.y}%`,
+          }}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.5 }}
         >
-          <div className={`w-full h-full rounded-full ${location.status === 'active' ? 'bg-green-400' : 'bg-red-400'}`} />
-          <div className={`absolute w-full h-full rounded-full ${location.status === 'active' ? 'bg-green-400' : 'bg-red-400'} animate-ping opacity-75`} />
+          <div
+            className={`absolute w-full h-full rounded-full ${
+              location.status === "active" ? "bg-green-400" : "bg-red-400"
+            } animate-ping opacity-75`}
+          />
+          <div
+            className={`w-full h-full rounded-full ${
+              location.status === "active" ? "bg-green-400" : "bg-red-400"
+            }`}
+          />
         </motion.div>
       ))}
     </div>
