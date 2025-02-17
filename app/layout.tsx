@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { I18nProvider } from "@/components/i18n-provider";
 import AffiliateProvider from "./AffiliateProvider";
 import FunProvider from "./FunProvider";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
+        <Suspense>
         <AffiliateProvider />
+        </Suspense>
         <FunProvider />
         <I18nProvider>
           <Navbar />
