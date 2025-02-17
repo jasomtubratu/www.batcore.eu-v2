@@ -24,8 +24,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/favicon.ico" alt="BatCore.eu" width={32} height={32} />
-              <span className="text-xl font-bold">BatCore.eu</span>
+              <Image src="/favicon.ico" alt="BatCore.eu" width={32} height={32}/>
+              <span className="text-xl font-bold hidden lg:flex">BatCore.eu</span>
             </Link>
             <div className="hidden md:flex items-center space-x-4">
             <NavLinksLeft  />
@@ -34,7 +34,9 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             <NavLinksRight />
+            <div className="hidden lg:flex">
             <LanguageSelector />
+            </div>
           </div>
 
           <button className="md:hidden" onClick={toggleMenu}>
