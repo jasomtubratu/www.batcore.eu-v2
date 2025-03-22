@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
-import { MemoryStick, Cpu, HardDrive } from "lucide-react";
+import { MemoryStick, Cpu, HardDrive, Percent } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
@@ -13,6 +13,7 @@ interface Package {
   id: string;
   name: string;
   cost: number;
+  discount: number;
   ram: number;
   cpu: number;
   disk: number;
@@ -41,8 +42,12 @@ export function PackageGrid({ packages }: PackageGridProps) {
   const { t } = useTranslation();
   const [currency, setCurrency] = useState<Currency>("EUR");
 
-  const convertPrice = (price: number, currency: Currency) => {
-    return (price *30 * EXCHANGE_RATES[currency]).toFixed(2);
+  const calculateDiscountedPrice = (price: number, discount: number) => {
+    return price * (1 - discount / 100);
+  };
+
+  const formatPrice = (price: number, currency: Currency) => {
+    return (price * 30 * EXCHANGE_RATES[currency]).toFixed(2);
   };
 
   return (
@@ -81,6 +86,13 @@ export function PackageGrid({ packages }: PackageGridProps) {
           proximity={64}
           inactiveZone={0.01}
         />
+              {pkg.discount > 0 && (
+                <div className="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                  <Percent className="w-4 h-4" />
+                  {pkg.discount}% OFF
+                </div>
+              )}
+
               {pkg.image && (
                 <div className="absolute top-0 left-0 right-0 h-32 flex items-center justify-center p-4">
                   <Image
@@ -88,7 +100,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
                     alt={pkg.name}
                     layout="fill"
                     objectFit="contain"
-                    className="max-h-full mt-3"
+                    className="max-h-full"
                   />
                 </div>
               )}
@@ -102,33 +114,47 @@ export function PackageGrid({ packages }: PackageGridProps) {
                 >
                   {pkg.name}
                 </motion.h3>
-                <motion.p 
-                  className="text-3xl font-bold text-center"
+                <motion.div 
+                  className="text-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  {CURRENCY_SYMBOLS[currency]}{convertPrice(pkg.cost, currency)}
-                  <span className="text-sm text-muted-foreground">{t("vps.packages.perMonth")}</span>
-                </motion.p>
+                  {pkg.discount > 0 ? (
+                    <>
+                      <p className="text-3xl font-bold">
+                        {CURRENCY_SYMBOLS[currency]}{formatPrice(calculateDiscountedPrice(pkg.cost, pkg.discount), currency)}
+                        <span className="text-sm text-muted-foreground">{t("vps.packages.perMonth")}</span>
+                      </p>
+                      <p className="text-sm text-muted-foreground line-through">
+                        {CURRENCY_SYMBOLS[currency]}{formatPrice(pkg.cost, currency)}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-3xl font-bold">
+                      {CURRENCY_SYMBOLS[currency]}{formatPrice(pkg.cost, currency)}
+                      <span className="text-sm text-muted-foreground">{t("vps.packages.perMonth")}</span>
+                    </p>
+                  )}
+                </motion.div>
               </CardHeader>
               
               <CardContent>
                 <ul className="space-y-4">
                   <Spec 
-                  icon={Cpu} 
-                  value={`${pkg.cpu}x`} 
-                  label={t("vps.packages.specs.cpu")} 
+                    icon={Cpu} 
+                    value={`${pkg.cpu}%`} 
+                    label={t("vps.packages.specs.cpu")} 
                   />
                   <Spec 
-                  icon={MemoryStick} 
-                  value={`${(pkg.ram / 1024).toFixed(0)} GB`} 
-                  label={t("vps.packages.specs.ram")} 
+                    icon={MemoryStick} 
+                    value={`${(pkg.ram / 1024).toFixed(0)} GB`} 
+                    label={t("vps.packages.specs.ram")} 
                   />
                   <Spec 
-                  icon={HardDrive} 
-                  value={`${(pkg.disk / 1024).toFixed(0)} GB`} 
-                  label={t("vps.packages.specs.storage")} 
+                    icon={HardDrive} 
+                    value={`${(pkg.disk / 1024).toFixed(0)} GB`} 
+                    label={t("vps.packages.specs.storage")} 
                   />
                 </ul>
               </CardContent>
