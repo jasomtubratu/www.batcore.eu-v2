@@ -89,7 +89,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
               {pkg.discount > 0 && (
                 <div className="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                   <Percent className="w-4 h-4" />
-                  {pkg.discount}% OFF
+                  -{pkg.discount}%
                 </div>
               )}
 

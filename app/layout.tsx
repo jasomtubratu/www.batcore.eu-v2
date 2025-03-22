@@ -6,8 +6,8 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { I18nProvider } from "@/components/i18n-provider";
 import AffiliateProvider from "./AffiliateProvider";
-import FunProvider from "./FunProvider";
 import { Suspense } from "react";
+import AuthProvider from "./AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,15 +30,18 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense>
-        <AffiliateProvider />
+          <AffiliateProvider />
         </Suspense>
-        <FunProvider />
-        <I18nProvider>
-          <Navbar />
-          {children}
-          <Footer />
-          <Toaster />
-        </I18nProvider>
+
+
+        <AuthProvider>
+          <I18nProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <Toaster />
+          </I18nProvider>
+        </AuthProvider>
       </body>
     </html>
   );
