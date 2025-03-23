@@ -5,7 +5,7 @@ import { HeroSection } from "@/components/minecraft/hero-section";
 import { getPackages } from "@/lib/api";
 
 export default async function MinecraftPage() {
-  const packages = await getPackages(1);
+  const packages = await getPackages("minecraft");
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">

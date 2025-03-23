@@ -1,10 +1,29 @@
-export async function getPackages(type: number) {
-    const res = await fetch('https://client.batcore.eu/api/packages');
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch packages');
-    }
-  
-    const data = await res.json();
-    return data.packages.filter((pkg: any) => pkg.service === type);
+import { PrismaClient, Packages } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+export async function getPackages(category: string): Promise<Packages[]> {
+  let categoryInt: number;
+
+  if (category.toLowerCase() === 'minecraft') {
+    categoryInt = 1;
+  } else if (category.toLowerCase() === 'vps') {
+    categoryInt = 2;
+  } else {
+    throw new Error(`Invalid category: ${category}`);
   }
+
+  try {
+    const packages = await prisma.packages.findMany({
+      where: {
+        category: categoryInt,
+      },
+    });
+    return packages;
+  } catch (error) {
+    console.error('Error fetching packages:', error);
+    throw error;
+  }
+}
+
+export default prisma;

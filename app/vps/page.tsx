@@ -5,7 +5,7 @@ import { HeroSection } from "@/components/vps/hero-section";
 import { getPackages } from "@/lib/api";
 
 export default async function VPSPage() {
-  const packages = await getPackages(2);
+  const packages = await getPackages("vps");
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">

@@ -1,0 +1,37 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    email    String   @unique
+    password String
+}
+
+enum AnnouncementsCategory {
+    WARNING
+    ERROR
+}
+
+model Announcements {
+    id       String   @id @default(auto()) @map("_id") @db.ObjectId
+    title   String
+    category  AnnouncementsCategory
+}
+
+model Packages {
+    id       String   @id @default(auto()) @map("_id") @db.ObjectId
+    name    String  
+    cost   Int
+    discount Int
+    ram   Int
+    cpu   Int
+    disk   Int
+    image   String
+    category   Int //1 MINECRAFT 2 VPS
+}
