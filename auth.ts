@@ -1,6 +1,5 @@
 import NextAuth, { getServerSession, NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { Provider } from "next-auth/providers";
 
 import {
   verifyPassword,
@@ -70,7 +69,7 @@ export const authOptions: NextAuthOptions = {
         };
       },
     }),
-  ].filter(Boolean) as Provider[],
+  ].filter(Boolean),
   callbacks: {
     async jwt({ token, account }) {
       if (account) {
