@@ -55,19 +55,18 @@ export const authOptions: NextAuthOptions = {
         const email = credentials.email.toLocaleLowerCase();
         const user = await getUserFromDbByEmail(email);
 
-        if (!user) throw new Error("error.emailNotFound");
+        if (!user) throw new Error("Unauthorized");
 
         const isValidPassword = await verifyPassword(
           user.password || "",
           credentials.password
         );
 
-        if (!isValidPassword) throw new Error("error.invalidPassword");
+        if (!isValidPassword) throw new Error("Unauthorized");
 
         return {
           id: user.id.toString(),
           email: user.email,
-          name: user.name,
         };
       },
     }),
@@ -89,8 +88,6 @@ export const authOptions: NextAuthOptions = {
         session.user.id = userData.id;
         // @ts-ignore
         session.user.email = userData.email;
-        // @ts-ignore
-        session.user.role = userData.role;
 
         return session;
       } catch (error) {
@@ -100,9 +97,8 @@ export const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: "/secure-login",
+    signIn: "/login",
     error: "/",
-    signOut: "/logout",
   },
 };
 

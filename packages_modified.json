@@ -1,0 +1,242 @@
+{
+    "packages": [
+        {
+            "id": "66df5a9c1953d38b3fb99005",
+            "service": 1,
+            "name": "Pumpkin",
+            "cost": 11,
+            "discount": 10,
+            "ram": 2048,
+            "cpu": 100,
+            "disk": 30720,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "66df5e9b1953d38b3fb99007",
+            "service": 1,
+            "name": "Iron",
+            "cost": 31,
+            "discount": 10,
+            "ram": 6144,
+            "cpu": 300,
+            "disk": 61440,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "66df5d321953d38b3fb99006",
+            "service": 1,
+            "name": "Stone",
+            "cost": 20,
+            "discount": 10,
+            "ram": 4096,
+            "cpu": 200,
+            "disk": 30720,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "66cdd11da9ef4c7d90f04a03",
+            "service": 1,
+            "name": "Grass",
+            "cost": 7,
+            "discount": 10,
+            "ram": 1024,
+            "cpu": 100,
+            "disk": 20480,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "66df5f081953d38b3fb99008",
+            "service": 1,
+            "name": "Brick",
+            "cost": 41,
+            "discount": 10,
+            "ram": 8192,
+            "cpu": 400,
+            "disk": 61440,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "6714295b33c06f0fd6ae0d4a",
+            "service": 2,
+            "name": "Profi",
+            "cost": 106,
+            "discount": 0,
+            "ram": 20480,
+            "cpu": 10,
+            "disk": 153600,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "66df5f5b1953d38b3fb99009",
+            "service": 1,
+            "name": "Gold",
+            "cost": 51,
+            "discount": 10,
+            "ram": 10240,
+            "cpu": 500,
+            "disk": 81920,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "671428f633c06f0fd6ae0d47",
+            "service": 2,
+            "name": "Power",
+            "cost": 63,
+            "discount": 0,
+            "ram": 12288,
+            "cpu": 5,
+            "disk": 102400,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "6714291533c06f0fd6ae0d49",
+            "service": 2,
+            "name": "Pro",
+            "cost": 87,
+            "discount": 0,
+            "ram": 16384,
+            "cpu": 7,
+            "disk": 133120,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "66df5fbe1953d38b3fb9900a",
+            "service": 1,
+            "name": "Diamond",
+            "cost": 76,
+            "discount": 10,
+            "ram": 16384,
+            "cpu": 800,
+            "disk": 81920,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "66df62a41953d38b3fb9900b",
+            "service": 1,
+            "name": "Granite",
+            "cost": 86,
+            "discount": 10,
+            "ram": 24576,
+            "cpu": 1200,
+            "disk": 92160,
+            "databases": 10,
+            "backups": 3,
+            "allocations": 10,
+            "image": ""
+        },
+        {
+            "id": "671428cb33c06f0fd6ae0d46",
+            "service": 2,
+            "name": "Advance",
+            "cost": 39,
+            "discount": 0,
+            "ram": 8192,
+            "cpu": 4,
+            "disk": 71680,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "6702c65a6b3992340ded73d2",
+            "service": 2,
+            "name": "Starter",
+            "cost": 10,
+            "discount": 0,
+            "ram": 2048,
+            "cpu": 1,
+            "disk": 15360,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "6714297433c06f0fd6ae0d4b",
+            "service": 2,
+            "name": "Profi+",
+            "cost": 122,
+            "discount": 0,
+            "ram": 24576,
+            "cpu": 12,
+            "disk": 194560,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "671428a333c06f0fd6ae0d45",
+            "service": 2,
+            "name": "Medium",
+            "cost": 20,
+            "discount": 0,
+            "ram": 4096,
+            "cpu": 2,
+            "disk": 35840,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        },
+        {
+            "id": "6714eb98f77e9f589a20cebb",
+            "service": 2,
+            "name": "Quantum",
+            "cost": 156,
+            "discount": 0,
+            "ram": 32768,
+            "cpu": 16,
+            "disk": 225280,
+            "databases": 0,
+            "backups": 0,
+            "allocations": 0,
+            "image": ""
+        }
+    ],
+    "locations": {
+        "minecraft": [
+            {
+                "name": "cz",
+                "locationID": 1
+            }
+        ],
+        "vps": [
+            {
+                "name": "de",
+                "locationID": 1
+            }
+        ]
+    }
+}

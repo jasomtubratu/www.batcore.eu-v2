@@ -143,7 +143,7 @@ export function PackageGrid({ packages }: PackageGridProps) {
                 <ul className="space-y-4">
                   <Spec 
                     icon={Cpu} 
-                    value={`${pkg.cpu}%`} 
+                    value={`${pkg.cpu}`} 
                     label={t("vps.packages.specs.cpu")} 
                   />
                   <Spec 
