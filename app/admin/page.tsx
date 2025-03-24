@@ -6,6 +6,8 @@ import { Megaphone, Package } from "lucide-react"
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { BackgroundAnimation } from "@/components/background-animation";
+import { ThemeProvider } from "next-themes";
 
 export default function Home() {
     const { data: session, status } = useSession();
@@ -21,29 +23,34 @@ export default function Home() {
         return <div>Loading...</div>;
     }
     return (
-        <main className="min-h-screen p-4 md:p-8">
-            <h1 className="text-3xl font-bold tracking-tight mb-6">Admin Dashboard</h1>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+            <main className="min-h-screen bg-gradient-to-b from-background to-blue-950 relative">
+                
+                <h1 className="text-3xl font-bold tracking-tight mb-6 text-center mt-3">Admin Dashboard</h1>
 
-            <Tabs defaultValue="announcements" className="space-y-6">
-                <TabsList className="grid w-full max-w-md grid-cols-2">
-                    <TabsTrigger value="announcements" className="flex items-center gap-2">
-                        <Megaphone className="h-4 w-4" />
-                        Announcements
-                    </TabsTrigger>
-                    <TabsTrigger value="packages" className="flex items-center gap-2">
-                        <Package className="h-4 w-4" />
-                        Packages
-                    </TabsTrigger>
-                </TabsList>
+                <Tabs defaultValue="announcements" className="space-y-6">
+                    <div className="flex justify-center">
+                        <TabsList className="grid w-full max-w-md grid-cols-2">
+                            <TabsTrigger value="announcements" className="flex items-center gap-2">
+                                <Megaphone className="h-4 w-4" />
+                                Announcements
+                            </TabsTrigger>
+                            <TabsTrigger value="packages" className="flex items-center gap-2">
+                                <Package className="h-4 w-4" />
+                                Packages
+                            </TabsTrigger>
+                        </TabsList>
+                    </div>
 
-                <TabsContent value="announcements">
-                    <AnnouncementDashboard />
-                </TabsContent>
+                    <TabsContent value="announcements">
+                        <AnnouncementDashboard />
+                    </TabsContent>
 
-                <TabsContent value="packages">
-                    <PackageManagement />
-                </TabsContent>
-            </Tabs>
-        </main>
+                    <TabsContent value="packages">
+                        <PackageManagement />
+                    </TabsContent>
+                </Tabs>
+            </main>
+        </ThemeProvider>
     )
 }
