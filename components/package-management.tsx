@@ -397,7 +397,7 @@ function PackageCard({
           <div className="text-right">
             {pkg.discount ? (
               <>
-                <span className="text-lg font-medium">{pkg.price - pkg.discount} Credits</span>
+                <span className="text-lg font-medium">{pkg.price - (pkg.price * (pkg.discount / 100)).toFixed(0)} Credits</span>
                 <span className="text-sm text-muted-foreground line-through ml-2">{pkg.price}</span>
               </>
             ) : (
