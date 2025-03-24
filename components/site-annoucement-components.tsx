@@ -24,7 +24,7 @@ export function DismissibleAnnouncement({ text, type }: DismissibleAnnouncementP
           : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200"
       }`}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 mx-auto">
         {type === "WARNING" ? (
           <AlertTriangle className="h-5 w-5 flex-shrink-0" />
         ) : (
