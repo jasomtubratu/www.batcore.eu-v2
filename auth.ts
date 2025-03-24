@@ -96,7 +96,7 @@ export const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: "/najviacsecureloginevervisotomzejo",
+    signIn: "/login",
     error: "/",
   },
 };
