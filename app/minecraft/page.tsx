@@ -4,6 +4,8 @@ import { BackgroundAnimation } from "@/components/background-animation";
 import { HeroSection } from "@/components/minecraft/hero-section";
 import { getPackages } from "@/lib/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function MinecraftPage() {
   const packages = await getPackages("minecraft");
 

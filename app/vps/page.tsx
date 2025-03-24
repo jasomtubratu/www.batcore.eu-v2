@@ -4,6 +4,8 @@ import { BackgroundAnimation } from "@/components/background-animation";
 import { HeroSection } from "@/components/vps/hero-section";
 import { getPackages } from "@/lib/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function VPSPage() {
   const packages = await getPackages("vps");
 
