@@ -70,7 +70,7 @@ export const en = {
     title: "VPS Hosting",
     subtitle:
       "Experience lag-free VPS with our high-performance servers. Instant setup, powerful hardware, and 24/7 support.",
-    description: "Our VPS servers are built on the latest technologies and are suitable for a wide range of uses. With high performance and unlimited possibilities, they are the perfect solution for everyone who needs power and flexibility. \nVPS servers are equipped with AMD Ryzen9-5950X processors. This ensures that our servers can handle even the most demanding tasks.",
+    description: "Our VPS servers are built on the latest technologies and are suitable for a wide range of uses. With high performance and unlimited possibilities, they are the perfect solution for everyone who needs power and flexibility. \nVPS servers are equipped with AMD Ryzen 9 7950X3D processors. This ensures that our servers can handle even the most demanding tasks.",
     packages: {
       switchCurrency: "Switch Currency",
       specs: {

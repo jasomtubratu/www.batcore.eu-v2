@@ -70,7 +70,7 @@ export const cs = {
     title: "VPS Hosting",
     subtitle:
       "Zažijte bezproblémový VPS díky našim výkonným serverům. Okamžité nastavení, výkonný hardware a podpora 24/7.",
-      description: "Naše servery VPS jsou postaveny na nejnovějších technologiích a jsou vhodné pro širokou škálu použití. Díky vysokému výkonu a neomezeným možnostem jsou ideálním řešením pro každého, kdo potřebuje výkon a flexibilitu. Servery \nVPS jsou vybaveny procesory AMD Ryzen9-5950X. Díky tomu naše servery zvládnou i ty nejnáročnější úlohy.",
+      description: "Naše servery VPS jsou postaveny na nejnovějších technologiích a jsou vhodné pro širokou škálu použití. Díky vysokému výkonu a neomezeným možnostem jsou ideálním řešením pro každého, kdo potřebuje výkon a flexibilitu. Servery \nVPS jsou vybaveny procesory AMD Ryzen 9 7950X3D. Díky tomu naše servery zvládnou i ty nejnáročnější úlohy.",
     packages: {
       switchCurrency: "Změnit měnu",
       specs: {
