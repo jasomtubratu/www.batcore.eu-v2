@@ -11,7 +11,7 @@ export function DiscordStats() {
   const stats = [
     {
       icon: Users,
-      value: "100+",
+      value: "200+",
       label: t("discord.stats.members")
     },
     {
