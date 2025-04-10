@@ -9,12 +9,12 @@ export const serverLocations: ServerLocation[] = [
     status: "active",
     type: "minecraft",
     ip: "87.236.197.63",
-    coordinates: { x: 5, y: 35 }
+    coordinates: { x: 12, y: 53 }
   },
   {
     id: "2953470", //betterstack
     name: "DE1",
-    location: "Alsdorf, Germany",
+    location: "Frankfurt, Germany",
     status: "active",
     pingUrl: "https://vps.batcore.eu/ping",
     ip: "de1.batcore.eu",
